@@ -6,4 +6,5 @@ pandas
 sklearn
 jupyter
 matplotlib
+seaborn
 
