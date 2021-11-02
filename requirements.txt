@@ -1,1 +1,9 @@
 pkg-resources==0.0.0
+#Model developement libraries
+
+numpy
+pandas
+sklearn
+jupyter
+matplotlib
+
