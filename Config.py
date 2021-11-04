@@ -1,4 +1,4 @@
-TARGET = ['price']
+TARGET = 'price'
 
 REMOVE = ['id']
 

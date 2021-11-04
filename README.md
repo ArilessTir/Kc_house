@@ -5,7 +5,7 @@
 
     => id            : id of one house
     => date          : selling date
-    => price         : selling price
+    => price         : selling price [2014 - 2015]
     => bedrooms      : number of bedrooms
     => bathrooms     : number of bathrooms
     => sqft_living   : living surface
@@ -33,9 +33,7 @@
 
     NaN's ?: No NaN
 
-    Target: 'price' 
-
-        Regression
+    Target: 'price' => Regression Problem 
 
         Mean: 540088.1418
 
