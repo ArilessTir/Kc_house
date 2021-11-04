@@ -1,13 +1,15 @@
 TARGET = 'price'
 
-REMOVE = ['id']
+REMOVE = ['id','yr_renovated']
 
 DATE_TRANSFORMATION = ['date']
 
-CONTINUE = ['sqft_living', 'sqft_lot','sqft_above','sqft_basement','lat','long','sqft_living15','sqft_lot15']
+CONTINUE = ['sqft_living', 'sqft_lot','sqft_above','sqft_basement','sqft_living15','sqft_lot15']
 
-DISCRETE = ['bedrooms', 'bathrooms','floors','view','condition','grade','zipcode']
+DISCRETE = ['bedrooms', 'bathrooms','floors','view','condition','grade']
 
 BINARY = ['waterfront']
 
-YEAR = ['yr_built','yr_renovated']
+YEAR = ['yr_built']
+
+GEO = ['zipcode','lat','long']
