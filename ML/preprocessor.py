@@ -1,4 +1,4 @@
-from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import MinMaxScaler, PolynomialFeatures
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 import os
@@ -8,8 +8,10 @@ sys.path.append(current_path.replace('/ML',''))
 import Config
 
 continue_pip = Pipeline(steps=[ 
-    ('scaler',MinMaxScaler())
+    ('scaler',MinMaxScaler()),
+    ('poly', PolynomialFeatures(degree=4))
 ])
+
 
 transformer = ColumnTransformer(
     transformers=[
