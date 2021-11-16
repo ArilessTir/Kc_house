@@ -25,11 +25,15 @@ def run_training():
 
     ###### Metrics
 
-    print(f'RMSE:{np.sqrt(mean_squared_error(y_test, y_pred))}')
-    print(f'R²:{r2_score(y_test, y_pred)*100}')
+    f = open('metrics.txt','w')
+    f.write('### Metrics ###')
+    f.write(f'RMSE:{np.sqrt(mean_squared_error(y_test, y_pred))}\n')
+    f.write(f'R²:{r2_score(y_test, y_pred)*100}')
+    f.close()
     
-    plot_learning_curve(model,X,y)
+    ##### Learning curve
 
+    plot_learning_curve(model,X,y)
 
     filename = 'model_registry/model.sav'
     pickle.dump(model, open(filename, 'wb'))
