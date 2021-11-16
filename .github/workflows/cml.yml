@@ -19,7 +19,7 @@ jobs:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           pip3 install -r requirements.txt
-          python ML/train.py
+          python3 ML/train.py
           cat metrics.txt >> report.md
           cml-publish confusion_matrix.png --md >> report.md
           cml-send-comment report.md
