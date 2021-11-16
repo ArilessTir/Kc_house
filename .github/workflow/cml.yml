@@ -20,7 +20,8 @@ jobs:
         run: |
           pip3 install -r requirements.txt
           python train.py
- 
+
+          echo "mama"
           cat metrics.txt >> report.md
           cml-publish confusion_matrix.png --md >> report.md
           cml-send-comment report.md
