@@ -5,7 +5,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 import numpy as np
 import pickle
 import matplotlib.pyplot as plt 
-
+from plot_learning_curve import plot_learning_curve
 import os
 
 def run_training():
@@ -28,15 +28,8 @@ def run_training():
     print(f'RMSE:{np.sqrt(mean_squared_error(y_test, y_pred))}')
     print(f'R²:{r2_score(y_test, y_pred)*100}')
     
-    m, train, val = learning_curve(model, X, y, cv= 5,scoring='r2')
+    plot_learning_curve(model,X,y)
 
-    plt.plot(m, train.mean(1), label='train')
-    plt.plot(m, val.mean(1), label='val')
-    plt.title('Learning Curve')
-    plt.legend()
-    plt.xlabel('m')
-    plt.ylabel('score')
-    plt.show()
 
     filename = 'model_registry/model.sav'
     pickle.dump(model, open(filename, 'wb'))
